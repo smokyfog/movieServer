@@ -1,6 +1,8 @@
 const router = require('koa-router')()
 const Carousels = require('../model/carousels')
 const Movielist = require('../model/movielist')
+const Director = require('../model/director')
+const Actor = require('../model/actor')
 
 router.prefix('/movie')
 
@@ -51,10 +53,39 @@ router.get('/trailer/:id', async(ctx) => {
   console.log(ctx.params)
   let { id } = ctx.params
   let data = await Movielist.findOne({ id: id })
-  ctx.body = {
-    code: 0,
-    data: data
+  if(data.length){
+    ctx.body = {
+      code: 0,
+      data: data
+    }
+  }else{
+    ctx.body = {
+      code: -1,
+      message:'未查询到数据',
+      data: []
+    }
   }
 })
+
+// 根据视频id获取视频的导演
+router.get('/trailer/:id/:type', async(ctx) => {
+  console.log(ctx.params)
+  let { id, type } = ctx.params
+  let data = ''
+  if(type === '1') {
+    data = await Director.find({ id: id })
+  } else if (type === '2') {
+    data = await Actor.find({ id: id })
+  } else {
+    ctx.body = { code: -1, message:'请输入指定任务类型', data: [] }
+  }
+  
+  if(data.length){
+    ctx.body = { code: 0, data: data }
+  }else{
+    ctx.body = { code: -1, message:'未查询到数据', data: [] }
+  }
+})
+
 
 module.exports = router
