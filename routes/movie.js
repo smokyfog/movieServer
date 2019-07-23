@@ -41,7 +41,6 @@ router.post('/hot', async (ctx) => {
   }
 })
 
-
 // 猜你喜欢
 router.get('/guessULike', async (ctx) => {
   let data = await Movielist.aggregate([
@@ -51,6 +50,15 @@ router.get('/guessULike', async (ctx) => {
     ctx.body = { code: 0, data: data }
   } else {
     ctx.body = { code: -1, data: [], message:'查询失败' }
+  }
+})
+
+// 根据视频id获取视频详情
+router.get('/trailer/:id', async(ctx) => {
+  console.log(ctx.params)
+  ctx.body = {
+    code: 0,
+    data: ctx.params
   }
 })
 
