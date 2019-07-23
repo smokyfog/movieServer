@@ -121,25 +121,25 @@ const http = require('http')
 
 // 爬取轮播图数据
 
-var _allCarousels = []
-const getAllCarousels = async () => {
-  var options = {
-    method: 'POST',
-    header:{
-      'content-type':'application/x-www-form-urlencoded'
-    },
-    uri: 'https://www.imovietrailer.com/superhero/index/carousel/list',
-    qs: {
-      qq:"lee67669454"
-    }
-  }
-  var res = await rp(options)
-  var json = JSON.parse(res).data
-  _allCarousels = _.union(_allCarousels, json)
-  console.log('当前正在爬取'+json.length)
-  console.log('当前已经爬取'+_allCarousels.length+'条数据')
-  fs.writeFileSync('./allCarousels.json', JSON.stringify(_allCarousels, null, 4), 'utf8')
-  console.log('写入完成！')
-}
+// var _allCarousels = []
+// const getAllCarousels = async () => {
+//   var options = {
+//     method: 'POST',
+//     header:{
+//       'content-type':'application/x-www-form-urlencoded'
+//     },
+//     uri: 'https://www.imovietrailer.com/superhero/index/carousel/list',
+//     qs: {
+//       qq:"lee67669454"
+//     }
+//   }
+//   var res = await rp(options)
+//   var json = JSON.parse(res).data
+//   _allCarousels = _.union(_allCarousels, json)
+//   console.log('当前正在爬取'+json.length)
+//   console.log('当前已经爬取'+_allCarousels.length+'条数据')
+//   fs.writeFileSync('./allCarousels.json', JSON.stringify(_allCarousels, null, 4), 'utf8')
+//   console.log('写入完成！')
+// }
 
-getAllCarousels()
+// getAllCarousels()
