@@ -143,3 +143,87 @@ const http = require('http')
 // }
 
 // getAllCarousels()
+
+
+// 爬取电影演员详情
+
+// const doc = fs.readFileSync('./allVideos.json', 'utf-8')
+// var downdoc = JSON.parse(doc)
+// var len = downdoc.length
+// var _AllActor = []
+
+// const getAllActor = async (i = 0) => {
+//   console.log('正在爬取第'+i+'个数据')
+//   var options = {
+//     method: 'POST',
+//     header:{
+//       'content-type':'application/x-www-form-urlencoded'
+//     },
+//     uri: `https://www.imovietrailer.com/superhero/search/staff/${downdoc[i].id}/2`,
+//     form: {
+//       qq: 'lee67669454'
+//     },
+//     json: true
+//   }
+//   var res = await rp(options)
+//   var json = res.data
+//   json = json.map(item=>{
+//     item.id = downdoc[i].id
+//     return item
+//   })
+//   // console.log(json)
+//   _AllActor = _.union(_AllActor,json)
+//   console.log('当前已经爬取'+_AllActor.length+'条数据')
+//   if(i>= len-1){
+//     fs.writeFileSync('./allActor.json', JSON.stringify(_AllActor, null, 4), 'utf8')
+//     console.log('写入完成！')
+//     return
+//   }else {
+//     ++i
+//     getAllActor(i)
+//   }
+// }
+
+// getAllActor()
+
+
+
+// 爬取导演详情
+
+const doc = fs.readFileSync('./allVideos.json', 'utf-8')
+var downdoc = JSON.parse(doc)
+var len = downdoc.length
+var _AllDirector = []
+
+const getAllDirector = async (i = 0) => {
+  console.log('正在爬取第'+i+'个数据')
+  var options = {
+    method: 'POST',
+    header:{
+      'content-type':'application/x-www-form-urlencoded'
+    },
+    uri: `https://www.imovietrailer.com/superhero/search/staff/${downdoc[i].id}/1`,
+    form: {
+      qq: 'lee67669454'
+    },
+    json: true
+  }
+  var res = await rp(options)
+  var json = res.data
+  json = json.map(item=>{
+    item.id = downdoc[i].id
+    return item
+  })
+  _AllDirector = _.union(_AllDirector,json)
+  console.log('当前已经爬取'+_AllDirector.length+'条数据')
+  if(i>= len-1){
+    fs.writeFileSync('./allDirector.json', JSON.stringify(_AllDirector, null, 4), 'utf8')
+    console.log('写入完成！')
+    return
+  }else {
+    ++i
+    getAllDirector(i)
+  }
+}
+
+getAllDirector()

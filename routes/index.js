@@ -1,8 +1,13 @@
 const router = require('koa-router')()
 // var allVideos = require('../crawler/allVideos.json')
 // var allCarousels = require('../crawler/allCarousels.json')
+var allActor = require('../crawler/allActor.json')
+var allDirector = require('../crawler/allDirector.json')
 // const Movielist = require('../model/movielist')
 const Carousels = require('../model/carousels')
+
+const Actor = require('../model/actor')
+const Director = require('../model/director')
 
 
 router.get('/', async (ctx, next) => {
@@ -12,6 +17,13 @@ router.get('/', async (ctx, next) => {
   //  导入音频数据
   // let carousels = await Carousels.find({}).exec()
   // if (!carousels.length) Carousels.insertMany(allCarousels)
+  //  导入导演数据
+  let director = await Director.find({}).exec()
+  if (!director.length) Director.insertMany(allDirector)
+  //  导入演员数据
+  let actor = await Actor.find({}).exec()
+  if (!actor.length) Actor.insertMany(allActor)
+
   await ctx.render('index', {
     title: 'Hello Koa 2!'
   })

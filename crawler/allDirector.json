@@ -1,0 +1,497 @@
+[
+    {
+        "staffId": "s-1034",
+        "name": "约什·布恩",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw9cbuAaSq8AAHywki6Lik174.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1010"
+    },
+    {
+        "staffId": "s-1019",
+        "name": "西蒙·金伯格",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw8hcyAJ4SFAAJLNlLUrcw449.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1004"
+    },
+    {
+        "staffId": "s-1104",
+        "name": "安东尼·罗素",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9xe-APzk7AAHjyb84sR0824.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1006"
+    },
+    {
+        "staffId": "s-1105",
+        "name": "乔·罗素",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9xkGACaS4AAKsdd9cqHM231.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1006"
+    },
+    {
+        "staffId": "s-1081",
+        "name": "大卫·F·桑德伯格",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9kdSAFC9YAAG4YaUhdH4657.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1011"
+    },
+    {
+        "staffId": "s-1125",
+        "name": "安娜·波顿",
+        "sex": 0,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw-0A2AdRjvAAHe-JYUH4Y948.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1011"
+    },
+    {
+        "staffId": "s-1126",
+        "name": "瑞安·弗雷克",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw-0A-AU0StAAGd-GHKgsE568.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1011"
+    },
+    {
+        "staffId": "s-1040",
+        "name": "温子仁",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw9dVKALw0EAAJTu-Zylkc005.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1001"
+    },
+    {
+        "staffId": "s-1164",
+        "name": "鲁本·弗雷斯彻",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_InuAYBYnAAJ5gThYH3k993.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1026"
+    },
+    {
+        "staffId": "s-1086",
+        "name": "佩顿·里德",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9uReAIziGAAJSpdzJWGw648.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1002"
+    },
+    {
+        "staffId": "s-1001",
+        "name": "大卫·雷奇",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw8chiATjFMAAIKAvqZZFI007.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1006"
+    },
+    {
+        "staffId": "s-1104",
+        "name": "安东尼·罗素",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9xe-APzk7AAHjyb84sR0824.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1005"
+    },
+    {
+        "staffId": "s-1105",
+        "name": "乔·罗素",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9xkGACaS4AAKsdd9cqHM231.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1005"
+    },
+    {
+        "staffId": "s-1115",
+        "name": "瑞恩·库格勒",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw-wkaAAScGAAJmEs3557Q717.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1007"
+    },
+    {
+        "staffId": "s-1046",
+        "name": "扎克·施奈德",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw9e4WACxMmAAHam_1U--o575.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1007"
+    },
+    {
+        "staffId": "s-1171",
+        "name": "塔伊加·维迪提",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_J6uAWWunAAHW7u6kwpM631.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1029"
+    },
+    {
+        "staffId": "s-1151",
+        "name": "乔·沃茨",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_G_CAbZIyAAJ4c0tYjbw231.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1022"
+    },
+    {
+        "staffId": "s-1055",
+        "name": "派蒂·杰金斯",
+        "sex": 0,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9gEyALJGHAAGrGNzQSkQ962.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1008"
+    },
+    {
+        "staffId": "s-1141",
+        "name": "马克·耐沃尔代",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw-1-6AGGszAAIYPXlVO1A692.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1016"
+    },
+    {
+        "staffId": "s-1025",
+        "name": "詹姆斯·曼高德",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw9VhaAMvR1AAFODJOSKEE865.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1007"
+    },
+    {
+        "staffId": "s-1130",
+        "name": "斯科特·德瑞克森",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw-0MeADpNpAAJA_zzGZmI103.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1012"
+    },
+    {
+        "staffId": "s-1076",
+        "name": "大卫·阿耶",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9jZmAdxYrAAIUSaKm254421.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1010"
+    },
+    {
+        "staffId": "s-1011",
+        "name": "布莱恩·辛格",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw8fGKAMz6yAAHR7G0TP_s472.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1001"
+    },
+    {
+        "staffId": "s-1104",
+        "name": "安东尼·罗素",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9xe-APzk7AAHjyb84sR0824.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1010"
+    },
+    {
+        "staffId": "s-1105",
+        "name": "乔·罗素",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9xkGACaS4AAKsdd9cqHM231.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1010"
+    },
+    {
+        "staffId": "s-1046",
+        "name": "扎克·施奈德",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw9e4WACxMmAAHam_1U--o575.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1005"
+    },
+    {
+        "staffId": "s-1007",
+        "name": "蒂姆·米勒",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw8dy-AWx2-AAJVdEvaa0g189.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1005"
+    },
+    {
+        "staffId": "s-1086",
+        "name": "佩顿·里德",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9uReAIziGAAJSpdzJWGw648.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1001"
+    },
+    {
+        "staffId": "s-1159",
+        "name": "乔什·特兰克",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_ICqAO1r6AAIZ7B0UqCA063.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1025"
+    },
+    {
+        "staffId": "s-1093",
+        "name": "乔斯·韦登",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9vVWAfXJTAAHFzwB3IKM619.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1004"
+    },
+    {
+        "staffId": "s-1141",
+        "name": "马克·耐沃尔代",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw-1-6AGGszAAIYPXlVO1A692.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1015"
+    },
+    {
+        "staffId": "s-1011",
+        "name": "布莱恩·辛格",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw8fGKAMz6yAAHR7G0TP_s472.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1002"
+    },
+    {
+        "staffId": "s-1153",
+        "name": "马克·韦布",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_HWGACkrOAAImlFXEsak552.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1024"
+    },
+    {
+        "staffId": "s-1104",
+        "name": "安东尼·罗素",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9xe-APzk7AAHjyb84sR0824.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1009"
+    },
+    {
+        "staffId": "s-1105",
+        "name": "乔·罗素",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9xkGACaS4AAKsdd9cqHM231.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1009"
+    },
+    {
+        "staffId": "s-1170",
+        "name": "阿兰·泰勒",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_JxKAF4tSAAIuYWTWRvE107.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1028"
+    },
+    {
+        "staffId": "s-1025",
+        "name": "詹姆斯·曼高德",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw9VhaAMvR1AAFODJOSKEE865.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1009"
+    },
+    {
+        "staffId": "s-1046",
+        "name": "扎克·施奈德",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw9e4WACxMmAAHam_1U--o575.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1006"
+    },
+    {
+        "staffId": "s-1146",
+        "name": "沙恩·布莱克",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw_GPSAJ4ciAAI9jbBkzu0599.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1018"
+    },
+    {
+        "staffId": "s-1059",
+        "name": "克里斯托弗·诺兰",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9g_SAERa_AAIdXgg7sAA866.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1004"
+    },
+    {
+        "staffId": "s-1153",
+        "name": "马克·韦布",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_HWGACkrOAAImlFXEsak552.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1023"
+    },
+    {
+        "staffId": "s-1093",
+        "name": "乔斯·韦登",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9vVWAfXJTAAHFzwB3IKM619.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1003"
+    },
+    {
+        "staffId": "s-1141",
+        "name": "马克·耐沃尔代",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw-1-6AGGszAAIYPXlVO1A692.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1014"
+    },
+    {
+        "staffId": "s-1071",
+        "name": "马丁·坎贝尔",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9iyOAGAHIAAJXiY8xheo045.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1009"
+    },
+    {
+        "staffId": "s-1120",
+        "name": "乔·庄斯顿",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw-xxyAAWBuAALunZBJJso960.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1008"
+    },
+    {
+        "staffId": "s-1018",
+        "name": "马修·沃恩",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw8gwuAHaW2AAJS3MwBMXU897.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1003"
+    },
+    {
+        "staffId": "s-1167",
+        "name": "肯尼思·布拉纳",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/05/CpoxxFw_JPKAVmSUAAEubBKbK-0240.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1027"
+    },
+    {
+        "staffId": "s-1021",
+        "name": "加文·胡德",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/03/CpoxxFw9UYiANdqvAAFr_hyl1c8815.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "xman-1008"
+    },
+    {
+        "staffId": "s-1059",
+        "name": "克里斯托弗·诺兰",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9g_SAERa_AAIdXgg7sAA866.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1003"
+    },
+    {
+        "staffId": "s-1143",
+        "name": "乔恩·费儒",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw_FuGAB_LTAAJ98ORI_Tw503.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1017"
+    },
+    {
+        "staffId": "s-1135",
+        "name": "马克·斯蒂文·约翰逊",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw-1HKAYognAAIWa6gRbyo623.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1013"
+    },
+    {
+        "staffId": "s-1147",
+        "name": "山姆·雷米",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw_GdKASct-AAIion7KsjM717.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1021"
+    },
+    {
+        "staffId": "s-1059",
+        "name": "克里斯托弗·诺兰",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw9g_SAERa_AAIdXgg7sAA866.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "dc-1002"
+    },
+    {
+        "staffId": "s-1147",
+        "name": "山姆·雷米",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw_GdKASct-AAIion7KsjM717.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1020"
+    },
+    {
+        "staffId": "s-1147",
+        "name": "山姆·雷米",
+        "sex": 1,
+        "photo": "http://122.152.205.72:88/group1/M00/00/04/CpoxxFw_GdKASct-AAIion7KsjM717.png",
+        "role": 1,
+        "actName": "导演",
+        "id": "marvel-1019"
+    }
+]
