@@ -53,7 +53,7 @@ router.get('/trailer/:id', async(ctx) => {
   console.log(ctx.params)
   let { id } = ctx.params
   let data = await Movielist.findOne({ id: id })
-  if(data.length){
+  if(data){
     ctx.body = {
       code: 0,
       data: data
@@ -69,8 +69,8 @@ router.get('/trailer/:id', async(ctx) => {
 
 // 根据视频id获取视频的导演
 router.get('/trailer/:id/:type', async(ctx) => {
-  console.log(ctx.params)
   let { id, type } = ctx.params
+  console.log(id, type)
   let data = ''
   if(type === '1') {
     data = await Director.find({ id: id })
