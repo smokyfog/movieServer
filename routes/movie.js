@@ -50,7 +50,6 @@ router.get('/guessULike', async (ctx) => {
 
 // 根据视频id获取视频详情
 router.get('/trailer/:id', async(ctx) => {
-  console.log(ctx.params)
   let { id } = ctx.params
   let data = await Movielist.findOne({ id: id })
   if(data){

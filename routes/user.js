@@ -9,6 +9,7 @@ router.prefix('/user')
 
 // 注册登陆的统一逻辑
 router.post('/registOrLogin', async (ctx) => {
+    console.log(ctx.request.body)
     let { username, password } = ctx.request.body
     let data =await User.findOne({username:username})
     let token = new Date().getTime()+Math.random().toString(36).substr(2)
