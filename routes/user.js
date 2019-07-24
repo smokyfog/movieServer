@@ -88,16 +88,58 @@ router.post('/modifyUserinfo', async (ctx) => {
 
 // 方法二
 router.post('/uploadFace',async (ctx) => {
-    const file = ctx.request.files.file
-    const reader = fs.createReadStream(file.path)
-    let name = new Date().getTime()+file.name
-    let filePath = path.join(__dirname, '../public/uploads/')+name
-    const upStream = fs.createWriteStream(filePath)
-    reader.pipe(upStream)
+    let { headeruserid, headerusertoken } = ctx.request.header
+    let result = await User.findOne({ id: headeruserid, userUniqueToken: headerusertoken})
+    if(result){
+        let dirPath = path.resolve(__dirname, '../public/uploads')
+        let oldname = result.faceImage.split('/').pop()
+        let oldpath = dirPath +'/'+ oldname
+        console.log(oldpath)
+        console.log(fs.existsSync(oldpath))
+        const file = ctx.request.files.file
+        const reader = fs.createReadStream(file.path)
+        let newName = new Date().getTime()+file.name
+        let newFilePath = path.join(__dirname, '../public/uploads/')+newName
+        const upStream = fs.createWriteStream(newFilePath)
+        reader.pipe(upStream)
+        let resetPath = await User.update(
+            { id: headeruserid },
+            { faceImage: 'http://129.28.187.206:3001/uploads/'+newName }
+        )
+        if(resetPath){
+            ctx.body = {
+                code: 0,
+                message: '上传成功',
+                data: resetPath
+            }
+            if( fs.existsSync(oldpath) ) {
+                fs.unlinkSync(oldpath)
+            }
+        } else {
+            ctx.body = {
+                code: -1,
+                message: '上传失败,请重试',
+                data: []
+            }
+        }
+        
+    } else {
+        ctx.body = {
+            code: -1,
+            message: '更换图标失败,请重新登陆后再次尝试',
+            data: []
+        }
+    }
+    // const file = ctx.request.files.file
+    // const reader = fs.createReadStream(file.path)
+    // let name = new Date().getTime()+file.name
+    // let filePath = path.join(__dirname, '../public/uploads/')+name
+    // const upStream = fs.createWriteStream(filePath)
+    // reader.pipe(upStream)
     ctx.body = {
         code: 0,
         message: '上传成功',
-        filename: 'http://localhost:3000/uploads/' + name
+        // filename: 'http://129.28.187.206:3001/uploads/' + name
     }
 })
 
