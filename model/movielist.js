@@ -49,6 +49,9 @@ var Movielist = new Schema({
   },
   createTime: {
     type: String
+  },
+  type: {
+    type: Number
   }
 })
 

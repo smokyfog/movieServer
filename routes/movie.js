@@ -28,6 +28,7 @@ router.post('/hot', async (ctx) => {
   } else if (type == 'trailer') {
     var data = await Movielist.aggregate([
       { $sort:{ 'score': 1 } },
+      { $skip: 1 },
       { $limit: 4 }
     ])
     ctx.body = { code: 0, data: data }
