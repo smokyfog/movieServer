@@ -1,4 +1,7 @@
+const fs = require('fs')
+const path = require('path')
 const router = require('koa-router')()
+const comm = require('../../comm/comm')
 const Movielist = require('../../model/movielist')
 
 router.prefix('/movie')
@@ -7,6 +10,7 @@ router.get('/', function (ctx, next) {
   ctx.body = '管理员影片页!'
 })
 
+// 影片列表
 router.get('/list', async (ctx) => {
   let { page=1, page_size=10, keywords } = ctx.query
   let reg = ''
@@ -36,6 +40,32 @@ router.get('/list', async (ctx) => {
       total:0,
       rows:[]
     }
+  }
+})
+
+// 提交影片
+router.post('/putMovie', async (ctx) => {
+  const newpath = ctx.request.body.path
+  const file = ctx.request.files.file
+  const name = file.name
+  const newDirPath = path.join(__dirname, '../../public/uploads/movie'+'/'+newpath)
+  const newFilePath = path.join(__dirname, '../../public/uploads/movie/'+newpath+'/'+name)
+  if( !fs.existsSync(newFilePath) ) {
+    comm.makeDir(newDirPath)
+    const reader = fs.createReadStream(file.path)
+    const upStream = fs.createWriteStream(newFilePath)
+    reader.pipe(upStream)
+    ctx.body = {
+      code: 0,
+      message: '上传成功',
+      path: comm.baseUrl+newFilePath
+    } 
+  } else {
+    ctx.body = {
+      code: -1,
+      message: '该文件已经存在',
+      path: ''
+    } 
   }
 })
 
