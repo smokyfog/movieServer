@@ -50,6 +50,7 @@ router.post('/putMovie', async (ctx) => {
   const name = file.name
   const newDirPath = path.join(__dirname, '../../public/uploads/movie'+'/'+newpath)
   const newFilePath = path.join(__dirname, '../../public/uploads/movie/'+newpath+'/'+name)
+  const url = '/uploads/movie/'+newpath+'/'+name
   if( !fs.existsSync(newFilePath) ) {
     comm.makeDir(newDirPath)
     const reader = fs.createReadStream(file.path)
@@ -58,13 +59,13 @@ router.post('/putMovie', async (ctx) => {
     ctx.body = {
       code: 0,
       message: '上传成功',
-      path: comm.baseUrl+newFilePath
+      path: comm.baseUrl+url
     } 
   } else {
     ctx.body = {
       code: -1,
       message: '该文件已经存在',
-      path: ''
+      path: comm.baseUrl+url
     } 
   }
 })
