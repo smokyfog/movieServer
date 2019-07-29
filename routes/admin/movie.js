@@ -91,11 +91,59 @@ router.post('/delPlotPics', async (ctx) => {
 // 提交影片
 router.post('/createMovie', async (ctx) => {
   const data = ctx.request.body
-  console.log(data)
-  ctx.body = {
-    code: 0,
-    data
-  }
+  const {
+    path,
+    name,
+    score,
+    prisedCounts,
+    basicInfo,
+    originalName,
+    releaseDate,
+    totalTime,
+    plotDesc,
+    plotPics,
+    trailer,
+    cover,
+    poster
+  } = ctx.request.body
+  if(path&&
+    name&&
+    score&&
+    prisedCounts&&
+    basicInfo&&
+    originalName&&
+    releaseDate&&
+    totalTime&&
+    plotDesc&&
+    plotPics.length&&
+    trailer&&
+    cover&&
+    poster) {
+      ctx.body = {
+        code: 0,
+        path,
+        name,
+        score,
+        prisedCounts,
+        basicInfo,
+        originalName,
+        releaseDate,
+        totalTime,
+        plotDesc,
+        plotPics,
+        trailer,
+        cover,
+        poster, 
+        message: '成功' 
+      }
+      
+    } else {
+      ctx.body = {
+        code: -1,
+        data,
+        message: '请传入全部所需参数'
+      }
+    }
 })
 
 module.exports = router
