@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const url = require('url')
 const router = require('koa-router')()
 const comm = require('../../comm/comm')
 const Movielist = require('../../model/movielist')
@@ -50,7 +51,7 @@ router.post('/putMovie', async (ctx) => {
   const name = file.name
   const newDirPath = path.join(__dirname, '../../public/uploads/movie'+'/'+newpath)
   const newFilePath = path.join(__dirname, '../../public/uploads/movie/'+newpath+'/'+name)
-  const url = '/uploads/movie/'+newpath+'/'+name
+  const url = `/uploads/movie/${newpath}${newpath?'/':''}${name}`
   if( !fs.existsSync(newFilePath) ) {
     comm.makeDir(newDirPath)
     const reader = fs.createReadStream(file.path)
@@ -63,10 +64,37 @@ router.post('/putMovie', async (ctx) => {
     } 
   } else {
     ctx.body = {
-      code: -1,
+      code: 0,
       message: '该文件已经存在',
       path: comm.baseUrl+url
     } 
+  }
+})
+
+// 删除某图片
+router.post('/delPlotPics', async (ctx) => {
+  const delPath = ctx.request.body.path
+  const dir = url.parse(delPath,true).pathname
+  const delDir = path.join(__dirname, '../../public'+dir)
+  if( fs.existsSync(delDir) ) {
+    try {
+      fs.unlinkSync(delDir)
+      ctx.body = { code: 0, data: { path: delDir }, message: '删除成功！' }
+    } catch (err) {
+      ctx.body = { code: -1, data: {}, message: '删除失败！' }
+    }
+  } else {
+    ctx.body = { code: -1, data: {}, message: '未发现该文件' }
+  }
+})
+
+// 提交影片
+router.post('/createMovie', async (ctx) => {
+  const data = ctx.request.body
+  console.log(data)
+  ctx.body = {
+    code: 0,
+    data
   }
 })
 
