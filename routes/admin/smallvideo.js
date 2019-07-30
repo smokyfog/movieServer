@@ -34,4 +34,21 @@ router.post('/add', async (ctx) => {
     }
 })
 
+router.get('/list', async (ctx) => {
+    let result = await SmallVideo.find({})
+    if (result.length) {
+        ctx.body = {
+            code: 0,
+            message: 'succ',
+            data: result
+        }
+    } else {
+        ctx.body = {
+            code: -1,
+            message: '未找到数据',
+            data: []
+        }
+    }
+})
+
 module.exports = router
