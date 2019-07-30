@@ -4,8 +4,7 @@ var Schema=mongoose.Schema;
 // 生成id
 let ObjectId = Schema.Types.ObjectId;
 
-var Movie = new Schema({
-  id: ObjectId,
+var SmallVideo = new Schema({
   path: {
     type: String
   },
@@ -15,38 +14,26 @@ var Movie = new Schema({
   score: {
     type: Number
   },
-  prisedCounts: {
-    type: Number
-  },
   basicInfo: {
-    type: String
-  },
-  originalName: {
-    type: String
-  },
-  releaseDate: {
-    type: String
-  },
-  totalTime: {
     type: String
   },
   plotDesc: {
     type: String
   },
-  plotPics: {
+  trailer: {
     type: String
   },
   cover: {
     type: String
   },
-  trailer: {
-    type: String
-  },
-  poster: {
-    type: String
+  userid: ObjectId,
+  praiseCount: {
+    type: Number,
+    default: 0
   },
   type: {
-    type: String
+    type: Number,
+    default: 1
   },
 }, {
   // 加入该配置项，会自动生成创建时间
@@ -58,4 +45,4 @@ var Movie = new Schema({
 })
 
 
-module.exports=mongoose.model('Movie', Movie, 'movie');
+module.exports=mongoose.model('SmallVideo', SmallVideo, 'smallvideo');

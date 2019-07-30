@@ -57,6 +57,10 @@ const User = new Schema({
     password: {
         type: String,
         default:null
+    },
+    type: {
+        type: Number,
+        default: 1
     }
 })
 

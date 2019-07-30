@@ -4,6 +4,7 @@ const url = require('url')
 const router = require('koa-router')()
 const comm = require('../../comm/comm')
 const Movielist = require('../../model/movielist')
+const Movie = require('../../model/admin/movie')
 
 router.prefix('/movie')
 
@@ -119,8 +120,12 @@ router.post('/createMovie', async (ctx) => {
     trailer&&
     cover&&
     poster) {
-      ctx.body = {
-        code: 0,
+      let Pics = []
+      plotPics.map(item => {
+        Pics.push(comm.getUrlDir(item.url))
+      })
+      Pics = JSON.stringify(Pics)
+      let addMovie = new Movie({
         path,
         name,
         score,
@@ -130,19 +135,19 @@ router.post('/createMovie', async (ctx) => {
         releaseDate,
         totalTime,
         plotDesc,
-        plotPics,
-        trailer,
-        cover,
-        poster, 
-        message: '成功' 
+        plotPics: Pics,
+        trailer: comm.getUrlDir(cover),
+        cover: comm.getUrlDir(cover),
+        poster: comm.getUrlDir(cover)
+      })
+      let result = await addMovie.save()
+      if (result) {
+        ctx.body = { code: 0, data, message: '成功' }
+      } else {
+        ctx.body = { code: 0, data, message: '上传失败' }
       }
-      
     } else {
-      ctx.body = {
-        code: -1,
-        data,
-        message: '请传入全部所需参数'
-      }
+      ctx.body = { code: -1, data, message: '请传入全部所需参数' }
     }
 })
 
