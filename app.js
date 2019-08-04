@@ -16,6 +16,7 @@ const search = require('./routes/search')
 const movie = require('./routes/movie')
 const user = require('./routes/user')
 const admin = require('./routes/admin')
+const smallmovie = require('./routes/smallmovie')
 
 // error handler
 onerror(app)
@@ -67,6 +68,7 @@ app.use(search.routes(), search.allowedMethods())
 app.use(movie.routes(), movie.allowedMethods())
 app.use(user.routes(), user.allowedMethods())
 app.use(admin.routes(), admin.allowedMethods())
+app.use(smallmovie.routes(), smallmovie.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
