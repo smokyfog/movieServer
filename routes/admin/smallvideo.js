@@ -15,7 +15,7 @@ router.post('/add', async (ctx) => {
         userid,
         praiseCount,
         type,
-        trailer: comm.getUrlDir(cover),
+        trailer: comm.getUrlDir(trailer),
         cover: comm.getUrlDir(cover),
     })
     let result = await smallvideo.save()
@@ -37,6 +37,10 @@ router.post('/add', async (ctx) => {
 router.get('/list', async (ctx) => {
     let result = await SmallVideo.find({})
     if (result.length) {
+        result.map(item => {
+            item.trailer = comm.baseUrl+item.trailer
+            item.cover = comm.baseUrl+item.cover
+        })
         ctx.body = {
             code: 0,
             message: 'succ',
