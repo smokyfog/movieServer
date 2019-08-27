@@ -1,5 +1,6 @@
 const router = require('koa-router')()
 const User = require('../model/user')
+const axios = require('axios')
 const multer=require('koa-multer')
 const fs = require('fs')
 const path = require('path')
@@ -37,6 +38,47 @@ router.post('/registOrLogin', async (ctx) => {
         let result = await addUser.save()
         if(result) {
             let userinfo = await User.findOne({ username, password }, { password: 0 })
+            ctx.body = { code: 0, message: '新建账号成功', data: userinfo }
+        } else {
+            ctx.body = { code: -1, message: '创建账号失败', data: []}
+        }
+    }
+})
+
+router.post('/mpWXLogin/:code', async (ctx) => {
+    const { code } = ctx.params
+    const { avatarUrl, nickName, whichMP } = ctx.request.body
+    const appid = 'wxf702909ea55035a0'
+    const secret = 'f4125aa517c2ea67d9ecb15d08294543'
+    let token = new Date().getTime()+Math.random().toString(36).substr(2)
+    const res = await axios.get('https://api.weixin.qq.com/sns/jscode2session',{
+        params: {
+            appid,
+            secret,
+            js_code: code,
+            grant_type: 'aythorization_code'
+        }
+    })
+    if( !res.data.openid ) return ctx.body = { code: 1, msg: '注册失败' }; 
+    const appWxOpenId = res.data.openid
+    const result = await User.find({appWxOpenId})
+    if( result.length ) {
+        let data = await User.findOne({ appWxOpenId },{ password: 0 })
+        ctx.body = { code: 0, data: data, message:'登陆成功' }
+    } else {
+        const registTime = new Date()
+        const id = Math.random().toString(36).substr(2)+new Date().getTime()
+        var addUser = new User({
+            id: id,
+            username: nickName,
+            nickname: nickName,
+            password: '',
+            registTime,
+            faceImage: avatarUrl
+        })
+        let result = await addUser.save()
+        if ( result ) {
+            let userinfo = await User.findOne({ id }, { password: 0 })
             ctx.body = { code: 0, message: '新建账号成功', data: userinfo }
         } else {
             ctx.body = { code: -1, message: '创建账号失败', data: []}
